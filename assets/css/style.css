@@ -7,7 +7,7 @@
   /*========== Colors ==========*/
   /* Color mode HSL(hue, saturation, lightness) */
   --first-color: hsl(268, 77%, 58%);
-  --first-color-dark: hsl(268, 78%, 51%);
+  --first-color-dark: hsl(268, 75%, 40%);
   --first-color-light: hsl(268, 100%, 83%);
   --title-color: hsl(0, 0%, 87%);
   --text-color: hsl(0, 0%, 69%);
@@ -234,6 +234,7 @@ img {
 }
 .skill-bar {
   background-color: var(--border-color);
+  margin-inline: 1rem;
 }
 .skill-percentage {
   background-color: var(--first-color);
@@ -254,6 +255,14 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+.skills-item {
+  border: 1px var(--border-color) solid;
+  padding-block: 2rem;
+  border-radius: 5px;
+  background-color: var(--container-color);
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
 .skills-titles,
 .skill-desc {
   padding-inline: 1.5rem;
@@ -271,4 +280,54 @@ img {
 
 .skill-desc {
   margin-block: 1rem 1.8rem;
+}
+/*===============Portfolio=====================*/
+.work-cont {
+  grid-template-columns: repeat(3, 1fr);
+}
+.works {
+  background-color: var(--container-color);
+}
+.work-card {
+  position: relative;
+  cursor: pointer;
+}
+.work-img {
+  vertical-align: middle;
+}
+.work-details {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(3px);
+  opacity: 0;
+}
+.work-img,
+.work-details {
+  border-radius: 5px;
+}
+
+.work-title {
+  font-size: var(--h3-font-size);
+}
+.work-title,
+.work-desc {
+  color: var(--white);
+  transform: translateY(1.5rem);
+  transition: 0.3s ease all;
+}
+.work-desc {
+  font-size: var(--larger-font-size);
+}
+/*=======hover=======*/
+.work-card:hover .work-details {
+  opacity: 1;
+}
+.work-card:hover :is(.work-title, .work-desc) {
+  transform: translateY(0);
 }
