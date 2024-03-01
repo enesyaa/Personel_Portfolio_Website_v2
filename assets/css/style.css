@@ -331,3 +331,44 @@ img {
 .work-card:hover :is(.work-title, .work-desc) {
   transform: translateY(0);
 }
+/*===============Contact============================*/
+.contact-form {
+  width: 800px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form input {
+  background-color: var(--container-color);
+  height: 50px;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: 300;
+  color: var(--title-color);
+}
+#subject {
+  width: 450px;
+}
+textarea {
+  width: 450px;
+  background-color: var(--container-color);
+  resize: none;
+  border-radius: 5px;
+  margin-block: 0.5rem;
+  padding: 1rem;
+  font-weight: 300;
+  color: var(--title-color);
+}
+.form-btn {
+  border: 2px solid var(--first-color-dark);
+  width: 200px;
+  text-align: center;
+  padding: 5px;
+  font-weight: var(--weight-600);
+  border-radius: 5px;
+  margin-block: 0.5rem;
+  font-weight: 500;
+}
